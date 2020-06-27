@@ -13,13 +13,13 @@ export default function PortfolioDialog() {
 
     return (
         <div>
-            <Dialog
+            <Dialog fullWidth maxWidth='xs'
                 open={state.show}
                 onClose={handleClose}
                 aria-labelledby="dialog-title">
                 <DialogTitle id="dialog-title">Geethanjali Veetil</DialogTitle>
                 <DialogContent>
-                    <DialogContentText>
+                    <DialogContentText color="textPrimary">
                         {state.message}
                     </DialogContentText>
                 </DialogContent>
@@ -29,6 +29,6 @@ export default function PortfolioDialog() {
                     </Button>
                 </DialogActions>
             </Dialog>
-        </div>
+        </div >
     );
 }
