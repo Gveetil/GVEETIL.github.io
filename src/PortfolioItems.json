@@ -17,6 +17,19 @@
         "githubUrl": "https://github.com/dev-hg20/lets-talk-corona"
     },
     {
+        "title": "Employee Directory",
+        "image": "employee_directory",
+        "technologies": [
+            "React",
+            "Bootstrap",
+            "json",
+            "CSS"
+        ],
+        "description": "View a centralized searchable employee directory - browse, sort and locate non-sensitive data about all employees.",
+        "appUrl": "https://gveetil.github.io/React-Employee-Directory/",
+        "githubUrl": "https://github.com/Gveetil/React-Employee-Directory"
+    },
+    {
         "title": "EVCS Finder",
         "image": "evcs_finder",
         "technologies": [
@@ -69,18 +82,5 @@
         "description": "The Weather Dashboard enables users to view the current and future weather outlook for any given city.",
         "appUrl": "https://gveetil.github.io/Weather-Dashboard/",
         "githubUrl": "https://github.com/Gveetil/Weather-Dashboard"
-    },
-    {
-        "title": "Work Day Scheduler",
-        "image": "day_planner",
-        "technologies": [
-            "JQuery",
-            "Bootstrap",
-            "HTML",
-            "CSS"
-        ],
-        "description": "The scheduler helps users to plan their day by saving important events for each work hour of the day.",
-        "appUrl": "https://gveetil.github.io/JQuery-Work-Day-Scheduler/",
-        "githubUrl": "https://github.com/Gveetil/JQuery-Work-Day-Scheduler"
     }
 ]

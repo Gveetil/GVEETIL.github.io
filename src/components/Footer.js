@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Toolbar, Typography } from '@material-ui/core';
 
+// Styles used by this component
 const useStyles = makeStyles((theme) => ({
     footer: {
         backgroundColor: theme.palette.primary.main,
@@ -13,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+// The page footer component 
 export default function Footer() {
     const classes = useStyles();
     return (

@@ -1,8 +1,6 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Box, Divider, Link } from '@material-ui/core';
-import IconButton from '@material-ui/core/IconButton';
+import { IconButton, Typography, Grid, Box, Divider, Link } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -11,6 +9,7 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import DescriptionIcon from '@material-ui/icons/Description';
 
+// Styles used by this component
 const useStyles = makeStyles((theme) => ({
     details: {
         backgroundColor: theme.palette.primary.main,
@@ -24,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
     },
 
     divider: {
-        marginTop: theme.spacing(3),
-        marginBottom: theme.spacing(3),
+        marginTop: theme.spacing(2),
+        marginBottom: theme.spacing(2),
         backgroundColor: theme.palette.primary.contrastText,
     },
 
@@ -35,9 +34,9 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+// This component displays the contact details text information and links  
 export default function ContactDetails(props) {
     const classes = useStyles();
-
     return (
         <Grid container className={classes.details}>
             <Grid item xs={12}>
@@ -51,7 +50,7 @@ export default function ContactDetails(props) {
                 <RoomIcon fontSize="small" />
             </Grid>
             <Grid item xs={11} className={classes.paddingLeft}>
-                <Typography variant="body2">
+                <Typography variant="body1">
                     Melbourne, Australia
                 </Typography>
             </Grid>
@@ -59,15 +58,15 @@ export default function ContactDetails(props) {
                 <PhoneIcon fontSize="small" />
             </Grid>
             <Grid item xs={11} className={classes.paddingLeft}>
-                <Typography variant="body2">
-                    0459215817
+                <Typography variant="body1">
+                    0459 215 817
                 </Typography>
             </Grid>
             <Grid item xs={1} >
                 <MailOutlineIcon fontSize="small" />
             </Grid>
             <Grid item xs={11} className={classes.paddingLeft}>
-                <Link variant="body2" underline="none"
+                <Link variant="body1" underline="none"
                     href="mailto:Geethanjali.tv@gmail.com">
                     Geethanjali.tv@gmail.com
                 </Link>
@@ -76,7 +75,7 @@ export default function ContactDetails(props) {
                 <DescriptionIcon fontSize="small" />
             </Grid>
             <Grid item xs={11} className={classes.paddingLeft}>
-                <Link variant="body2" underline="none" target="_blank"
+                <Link variant="body1" underline="none" target="_blank"
                     href="Resume.pdf">Resume
                 </Link>
             </Grid>
@@ -90,13 +89,16 @@ export default function ContactDetails(props) {
             </Grid>
             <Grid item xs={12}>
                 <Box display="flex" justifyContent="center">
-                    <IconButton aria-label="LinkedIn" color="secondary">
+                    <IconButton component="a" aria-label="LinkedIn" color="secondary" target="_blank"
+                        href='https://www.linkedin.com/in/geethanjali-veetil/' >
                         <LinkedInIcon fontSize="large" />
                     </IconButton>
-                    <IconButton aria-label="GitHub" color="inherit">
+                    <IconButton component="a" aria-label="GitHub" color="inherit" target="_blank"
+                        href='https://github.com/Gveetil'>
                         <GitHubIcon />
                     </IconButton>
-                    <IconButton aria-label="Facebook" color="secondary">
+                    <IconButton component="a" aria-label="Facebook" color="secondary" target="_blank"
+                        href='https://www.facebook.com/geethanjali.veetil'>
                         <FacebookIcon fontSize="large" />
                     </IconButton>
                 </Box>

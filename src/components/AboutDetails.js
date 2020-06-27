@@ -2,19 +2,21 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography } from '@material-ui/core';
 
+// Styles used by this component
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: theme.palette.background.default,
         color: theme.palette.background.contrastText,
         paddingLeft: theme.spacing(4),
         paddingRight: theme.spacing(3),
-        paddingTop: theme.spacing(2),
+        paddingTop: theme.spacing(3),
         paddingBottom: theme.spacing(1),
         width: "100%",
         height: "100%",
     }
 }));
 
+// This component displays the text content in the about page
 export default function AboutDetails(props) {
     const classes = useStyles();
     return (

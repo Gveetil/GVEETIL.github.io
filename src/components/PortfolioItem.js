@@ -1,19 +1,18 @@
 import React from 'react';
-import path from 'path';
-import { Chip, Fade, Box, CardHeader, Typography, Button, Card, CardActionArea, CardMedia, CardContent, CardActions } from '@material-ui/core';
+import {
+    Chip, Fade, Box, CardHeader, Typography, Button, Card, CardActionArea,
+    CardMedia, CardContent, CardActions
+} from '@material-ui/core';
 import Color from 'color';
 import { makeStyles } from '@material-ui/core/styles';
 import LaunchIcon from '@material-ui/icons/Launch';
 import CodeIcon from '@material-ui/icons/Code';
+import utilities from "../utils/utilities";
 
-// Path to images folder
-const IMAGE_PATH = path.join(process.env.PUBLIC_URL, "/images/");
-
+// Styles used by this component
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: theme.palette.portfolio.main,
-        padding: theme.spacing(0.2),
-        // minWidth: 300,
+        backgroundColor: theme.palette.portfolioFooter.main,
         borderRadius: 12,
         transition: '0.2s',
         boxShadow: 'none',
@@ -26,12 +25,20 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     title: {
-        color: theme.palette.portfolio.contrastText,
-        padding: theme.spacing(0.7),
+        backgroundColor: theme.palette.portfolioFooter.main,
+        color: theme.palette.portfolioFooter.contrastText,
+        padding: 0,
+        paddingTop: theme.spacing(2),
+    },
+    subtitle: {
+        fontSize: '1.2rem',
+        fontWeight: 'bold',
+        color: theme.palette.portfolioFooter.contrastText,
     },
     footer: {
-        color: theme.palette.portfolio.contrastText,
-        padding: theme.spacing(0.5),
+        backgroundColor: theme.palette.portfolioFooter.main,
+        color: theme.palette.portfolioFooter.contrastText,
+        padding: theme.spacing(1),
     },
     spacing: {
         paddingLeft: theme.spacing(2),
@@ -47,50 +54,48 @@ const useStyles = makeStyles((theme) => ({
         left: '0px',
         width: '100%',
         height: '100%',
-        color: theme.palette.text,
-        backgroundColor: 'white',
+        overflow: "hidden",
+        backgroundColor: theme.palette.portfolioOverlay.main,
+        color: theme.palette.portfolioOverlay.contrastText,
         display: "flex",
         justifyContent: "center",
     },
     chipContainer: {
         padding: theme.spacing(2),
         '& > *': {
-            margin: theme.spacing(0.5),
+            margin: theme.spacing(0.7),
+            borderRadius: 4,
+            fontWeight: '500',
+            color: theme.palette.portfolioOverlayItems.contrastText,
+            backgroundColor: theme.palette.portfolioOverlayItems.main,
         },
     }
 }));
 
+// This component generates a portfolio card based on the props passed in
 export default function PortfolioItem(props) {
-    // const styles4 = useStyles({ color: '#34241e' });
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
+    // Toggle show / hide of portfolio description overlay component 
     const toggleExpand = () => {
         setExpanded(!expanded);
     };
 
     return (
         <Card className={classes.root}>
-            <CardHeader
-                classes={{
-                    root: classes.title,
-                    subheader: classes.title,
-                }}
-                subheader={props.title}>
-
-            </CardHeader>
             <CardActionArea
+                component="a" href={props.appUrl} target="_blank"
                 onMouseEnter={toggleExpand}
                 onMouseLeave={toggleExpand}>
                 <CardMedia
                     className={classes.media}
-                    image={`${IMAGE_PATH}${props.image}.jpg`}
-                    title={props.title}>
-                    <Fade in={expanded} direction="up"
+                    image={`${utilities.imageFolder}${props.image}.jpg`}>
+                    <Fade in={expanded}
                         timeout={{ enter: 400, exit: 400, }} mountOnEnter unmountOnExit>
                         <CardContent className={classes.overlay}>
                             <Box m="auto">
-                                <Typography variant="body2" color="textSecondary" component="p">
+                                <Typography variant="body1" component="p">
                                     {props.description}
                                 </Typography>
                                 <Box className={classes.chipContainer}>
@@ -103,15 +108,23 @@ export default function PortfolioItem(props) {
                     </Fade>
                 </CardMedia>
             </CardActionArea>
+            <CardHeader
+                classes={{
+                    root: classes.title,
+                    subheader: classes.subtitle,
+                }}
+                subheader={props.title}>
+
+            </CardHeader>
             <CardActions className={classes.footer}>
                 <Box justifyItems="center" m="auto">
-                    <Button component="a" href={props.appUrl} target="_blank" size="small"
+                    <Button component="a" href={props.appUrl} target="_blank"
                         aria-label="launch application" color="inherit" className={classes.spacing}
-                        startIcon={<LaunchIcon />}> Open
+                        startIcon={<LaunchIcon />}> Visit Website
                     </Button>
-                    <Button component="a" href={props.githubUrl} target="_blank" size="small"
+                    <Button component="a" href={props.githubUrl} target="_blank"
                         aria-label="view code" color="inherit" className={classes.spacing}
-                        startIcon={<CodeIcon />}> Code
+                        startIcon={<CodeIcon />}> View Code
                     </Button>
                 </Box>
             </CardActions>

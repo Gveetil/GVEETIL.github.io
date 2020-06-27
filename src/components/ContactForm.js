@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { TextField, Box, FormControl, Button } from '@material-ui/core';
+import { TextField, Box, FormControl, Button, Snackbar, IconButton } from '@material-ui/core';
 import { SHOW_DIALOG, useDialogContext } from "../utils/DialogContext";
-import mailer from "../utils/mailer";
+import CloseIcon from '@material-ui/icons/Close';
+import utilities from "../utils/utilities";
 
-const incorrectDataMessage = (<><strong>Incomplete Values! </strong> <br /> Please complete all the fields.</>);
-const emailErrorMessage = (<><strong>Unable to submit details!</strong> Error while sending data - please try again later.</>);
+// Validation message
+const incorrectDataMessage = (<>
+    <strong>Incomplete Values! </strong>
+    <br /> Please complete all the fields.
+</>);
+// Error message
+const emailErrorMessage = (<>
+    <strong>Unable to submit details!</strong>
+    <br /> Error while sending data - please try again later.
+</>);
 
+// Styles used by this component
 const useStyles = makeStyles((theme) => ({
     form: {
         backgroundColor: theme.palette.background.default,
@@ -21,11 +31,16 @@ const useStyles = makeStyles((theme) => ({
     controlMargin: {
         marginTop: theme.spacing(1),
     },
+    snackbar: {
+        background: "green",
+    },
 }));
 
+// This component displays the contact details form  
 export default function ContactForm(props) {
     /* eslint-disable no-unused-vars */
     const [_, dispatchDialog] = useDialogContext();
+    const [showSnackbar, setShowSnackbar] = useState(false);
     const classes = useStyles();
     const [contactState, setContactState] = useState({
         name: "",
@@ -33,6 +48,15 @@ export default function ContactForm(props) {
         message: ""
     });
 
+    // Event handler for closing success message on submit of form
+    function closeSuccessMessage(event, reason) {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setShowSnackbar(false);
+    };
+
+    // Method shows a dialog box with the given message
     function showDialog(message) {
         dispatchDialog({ type: SHOW_DIALOG, show: true, message });
     };
@@ -55,13 +79,16 @@ export default function ContactForm(props) {
         if (name.length === 0 || email.length === 0 || message.length === 0) {
             showDialog(incorrectDataMessage);
         } else {
+            // Construct email message
             let emailMessage = `Portfolio Contact Form Submission:
                             Name: ${name}
                             Email: ${email}
                             Message: ${message}`;
-            if (await mailer.sendMail(emailMessage)) {
+            if (await utilities.sendMail(emailMessage)) {
+                // Successful
                 displaySuccessMessage();
             } else {
+                // Display error
                 showDialog(emailErrorMessage);
             }
         }
@@ -69,9 +96,7 @@ export default function ContactForm(props) {
 
     // Display success message and clear form fields
     function displaySuccessMessage() {
-        // Display success message
-
-        // Clear form data
+        setShowSnackbar(true);
         setContactState({
             name: "",
             email: "",
@@ -80,29 +105,50 @@ export default function ContactForm(props) {
     }
 
     return (
-        <FormControl noValidate autoComplete="off" className={classes.form}>
-            <Box display="flex" flexWrap="wrap" >
-                <TextField id="standard-basic" color="secondary" name="name"
-                    className={classes.controlMargin}
-                    onChange={handleInputChange}
-                    margin="dense" label="Name" variant="outlined" fullWidth />
-                <TextField id="standard-basic" color="secondary" name="email"
-                    className={classes.controlMargin}
-                    onChange={handleInputChange}
-                    label="Email" margin="dense"
-                    variant="outlined" size="small" fullWidth />
-                <TextField fullWidth color="secondary" name="message"
-                    className={classes.controlMargin}
-                    onChange={handleInputChange}
-                    margin="dense" label="Message" multiline rows={9}
-                    variant="outlined" />
-            </Box>
-            <Box display="flex" justifyContent="flex-end" className={classes.controlMargin}>
-                <Button variant="outlined" type="submit" color="secondary"
-                    onClick={handleSubmit}>
-                    Send Message
+        <>
+            <FormControl component="form" noValidate autoComplete="off" className={classes.form}>
+                <Box display="flex" flexWrap="wrap" >
+                    <TextField color="secondary" name="name"
+                        className={classes.controlMargin}
+                        value={contactState.name}
+                        onChange={handleInputChange}
+                        margin="dense" label="Name" variant="outlined" fullWidth />
+                    <TextField color="secondary" name="email"
+                        className={classes.controlMargin}
+                        value={contactState.email}
+                        onChange={handleInputChange}
+                        label="Email" margin="dense"
+                        variant="outlined" size="small" fullWidth />
+                    <TextField fullWidth color="secondary" name="message"
+                        className={classes.controlMargin}
+                        value={contactState.message}
+                        onChange={handleInputChange}
+                        margin="dense" label="Message" multiline rows={9}
+                        variant="outlined" />
+                </Box>
+                <Box display="flex" justifyContent="flex-end" className={classes.controlMargin}>
+                    <Button variant="outlined" type="submit" color="secondary"
+                        onClick={handleSubmit}>
+                        Send Message
                 </Button>
-            </Box>
-        </FormControl>
+                </Box>
+            </FormControl >
+            <Snackbar
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                open={showSnackbar}
+                autoHideDuration={5000}
+                onClose={closeSuccessMessage}
+                message="Success! Thank you for getting in touch."
+                ContentProps={{
+                    className: classes.snackbar,
+                }}
+                action={
+                    <IconButton size="small" aria-label="close" color="inherit" onClick={closeSuccessMessage}>
+                        <CloseIcon fontSize="small" />
+                    </IconButton>
+                }
+
+            />
+        </>
     );
 }

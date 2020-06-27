@@ -1,9 +1,11 @@
+import path from 'path';
 import emailjs from 'emailjs-com';
+// The email js api key to be used when sending mail
+const emailjsKey = process.env.REACT_APP_EMAIL_CODE;
+// Path to images folder
+const IMAGE_FOLDER_PATH = path.join(process.env.PUBLIC_URL, "/images/");
 
-const emailjsKey = "user_nccDGeyCbVLYWIItDNN4z";
-const techListItemStyle = "list-group-item technology-item rounded m-1 px-1 px-sm-2 py-0";
-
-const mailer = {
+const utilities = {
     /**
      * Makes a request to emailjs for sending an email and returns the result 
      * @param {string} message the message to be sent
@@ -21,9 +23,9 @@ const mailer = {
             return false;
         }
     },
+
+    // Path to images folder
+    imageFolder: IMAGE_FOLDER_PATH,
 }
 
-// Initialize email js
-//emailjs.init(emailjsKey);
-
-export default mailer;
+export default utilities;

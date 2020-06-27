@@ -3,9 +3,10 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 import lightBlue from '@material-ui/core/colors/lightBlue';
 
+// Load breakpoint
 const breakpoints = createBreakpoints({})
 
-// Create a theme instance.
+// Create a theme instance to be used to style the portfolio application.
 const theme = createMuiTheme({
     palette: {
         primary: {
@@ -13,7 +14,7 @@ const theme = createMuiTheme({
             contrastText: '#fff',
         },
         secondary: {
-            main: lightBlue[600],
+            main: lightBlue[700],
             contrastText: '#fff',
         },
         background: {
@@ -21,15 +22,28 @@ const theme = createMuiTheme({
             contrastText: '#000',
         },
         text: {
-            secondary: "gray",
+            secondary: blueGrey[200],
         },
-        portfolio: {
+        portfolioOverlay: {
             main: blueGrey[700],
             contrastText: '#fff',
+        },
+        portfolioOverlayItems: {
+            main: '#fff',
+            contrastText: '#000',
+        },
+        portfolioFooter: {
+            main: blueGrey[900],
+            contrastText: blueGrey[100],
         }
     },
     typography: {
+        fontFamily: '"Mada", Arial, Helvetica, sans-serif',
+        overline: {
+            fontSize: "small"
+        },
         h5: {
+            color: blueGrey[700],
             fontFamily: "Georgia, 'Times New Roman', Times, serif",
             fontWeight: "bold",
             marginTop: "1rem",
@@ -52,7 +66,7 @@ const theme = createMuiTheme({
     },
     toolbar: {
         border: "3px solid #04c2c9",
-    }
+    },
 });
 
 export default theme;

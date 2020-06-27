@@ -1,11 +1,9 @@
 import React from 'react';
-import path from 'path';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import utilities from '../utils/utilities';
 
-// Path to images folder
-const IMAGE_PATH = path.join(process.env.PUBLIC_URL, "/images/");
-
+// Styles used by this component
 const useStyles = makeStyles((theme) => ({
     details: {
         backgroundColor: theme.palette.primary.main,
@@ -17,19 +15,9 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         height: "100%",
     },
-
-    divider: {
-        marginTop: theme.spacing(3),
-        marginBottom: theme.spacing(3),
-        backgroundColor: theme.palette.primary.contrastText,
-    },
-
-    paddingLeft: {
-        paddingLeft: theme.spacing(1),
-        paddingBottom: theme.spacing(1),
-    }
 }));
 
+// This component displays the image in the about page
 export default function AboutImage(props) {
     const classes = useStyles();
 
@@ -38,7 +26,7 @@ export default function AboutImage(props) {
             align="center"
             justify="center"
             direction="column">
-            <Box ><img src={`${IMAGE_PATH}profileImage.JPG`}
+            <Box ><img src={`${utilities.imageFolder}profileImage.JPG`}
                 className="portfolio-image"
                 alt="Geethanjali Veetil" />
             </Box>
