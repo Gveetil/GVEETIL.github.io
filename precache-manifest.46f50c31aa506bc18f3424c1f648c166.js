@@ -1,31 +1,87 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ba84e8d221a42826cb8c0238309f69fd",
+    "revision": "17824c055af2e6b7d04ccdd4b7aa59ef",
     "url": "/index.html"
   },
   {
-    "revision": "31daeb5a7d65b5e48e31",
-    "url": "/static/css/2.e3d0dd9d.chunk.css"
+    "revision": "b8f8ed6b23b8c8c93db3",
+    "url": "/static/css/2.c78c2663.chunk.css"
   },
   {
-    "revision": "3a86ee621cab4ff346dd",
-    "url": "/static/css/main.9234fcca.chunk.css"
+    "revision": "8bee205c009a54f356fa",
+    "url": "/static/css/main.3a3600aa.chunk.css"
   },
   {
-    "revision": "31daeb5a7d65b5e48e31",
-    "url": "/static/js/2.d2f0fb8b.chunk.js"
+    "revision": "b8f8ed6b23b8c8c93db3",
+    "url": "/static/js/2.fcee3bf8.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.d2f0fb8b.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.fcee3bf8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3a86ee621cab4ff346dd",
-    "url": "/static/js/main.e6229e64.chunk.js"
+    "revision": "8bee205c009a54f356fa",
+    "url": "/static/js/main.f31037ef.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
     "url": "/static/js/runtime-main.19ccc7f6.js"
+  },
+  {
+    "revision": "2d209c1f6e854efda0d10612d9722943",
+    "url": "/static/media/mada-latin-200.2d209c1f.woff2"
+  },
+  {
+    "revision": "f280d0a47da0b0ace4f9c0ad73fe0d7c",
+    "url": "/static/media/mada-latin-200.f280d0a4.woff"
+  },
+  {
+    "revision": "3eca18f2570ece6682e54e7256e746ef",
+    "url": "/static/media/mada-latin-300.3eca18f2.woff2"
+  },
+  {
+    "revision": "c4405138a06d2c72856f94d93e600a15",
+    "url": "/static/media/mada-latin-300.c4405138.woff"
+  },
+  {
+    "revision": "2d420e398df2f9460843479d14526be0",
+    "url": "/static/media/mada-latin-400.2d420e39.woff2"
+  },
+  {
+    "revision": "b8c40e6cb29381340a7cd7be44e56244",
+    "url": "/static/media/mada-latin-400.b8c40e6c.woff"
+  },
+  {
+    "revision": "8627fe9bbe733f790c9bb7dc175a7206",
+    "url": "/static/media/mada-latin-500.8627fe9b.woff"
+  },
+  {
+    "revision": "dfece37c60ef634552c1f8db37f9d0c5",
+    "url": "/static/media/mada-latin-500.dfece37c.woff2"
+  },
+  {
+    "revision": "0462ea74ac7ce97d07c1e8941b2133a9",
+    "url": "/static/media/mada-latin-600.0462ea74.woff2"
+  },
+  {
+    "revision": "b64a9f15bc703b7d3a45058cb4e6d8f4",
+    "url": "/static/media/mada-latin-600.b64a9f15.woff"
+  },
+  {
+    "revision": "2474f8170acf6cd9671d6dc64518548c",
+    "url": "/static/media/mada-latin-700.2474f817.woff2"
+  },
+  {
+    "revision": "77dc66e0fb42ca4290264d28f01a54f0",
+    "url": "/static/media/mada-latin-700.77dc66e0.woff"
+  },
+  {
+    "revision": "c7634d4ecb409fa5f0cbed9fda1d0010",
+    "url": "/static/media/mada-latin-900.c7634d4e.woff2"
+  },
+  {
+    "revision": "fdce3f3f531451d1790aab0b086272b9",
+    "url": "/static/media/mada-latin-900.fdce3f3f.woff"
   },
   {
     "revision": "f8b1df51ba843179fa1cc9b53d58127a",
