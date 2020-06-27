@@ -1,7 +1,7 @@
 import React from 'react';
 import path from 'path';
 import 'fontsource-roboto';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 import { ThemeProvider, withStyles } from "@material-ui/core/styles";
 import { CssBaseline } from '@material-ui/core';
 import './App.css';
@@ -17,6 +17,7 @@ import { DialogProvider } from "./utils/DialogContext";
 // Path to images folder
 const IMAGE_PATH = path.join(process.env.PUBLIC_URL, "/images/");
 
+// Styling for the application page body
 const styles = theme => ({
   "@global": {
     body: {
@@ -29,9 +30,10 @@ const styles = theme => ({
   }
 });
 
+// The main application root component
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={theme}>
         <DialogProvider>
           <div className="App">
@@ -53,7 +55,7 @@ function App() {
           </div>
         </DialogProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
