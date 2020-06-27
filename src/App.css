@@ -1,0 +1,57 @@
+.portfolio-title{
+    margin-right: auto;
+}
+
+.portfolio-navbar{
+    border-bottom: 3px solid #04c2c9;
+}
+
+.portfolio-navbar a:visited,
+.portfolio-navbar a:link{
+     color:deepskyblue; 
+}
+
+.portfolio-navbar a:hover{
+    color:lightpink;
+    transition: color 0.5s;
+}
+
+.portfolio-navbar a:focus,
+.portfolio-navbar a:active {
+    color:#05fcfc;
+}
+
+.portfolio-navbar a.active{
+    color: lightpink;
+}
+
+.portfolio-navbar a{
+    font-weight: 400;
+    margin-right: 1rem;
+}
+
+.navbar-drawer {
+    width: 10rem;
+}
+
+.main{  
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 50px; 
+  }
+
+  .about-me-panel-header{
+    font-weight:bolder;
+    color:darkcyan;
+}
+
+.portfolio-image{
+    max-width: 10rem;
+    max-height: 10rem;
+    border-radius: 50%;
+}
+
+.slide-container{
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
