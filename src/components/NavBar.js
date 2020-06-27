@@ -13,7 +13,7 @@ export default function NavBar() {
             <AppBar position="static" className="portfolio-navbar">
                 <Toolbar variant="dense">
                     <ButtonGroup variant="text" className="portfolio-title">
-                        <Button component={Link} to="/About"><Avatar alt="Geethanjali Veetil" size="small" variant="rounded" src={`${IMAGE_PATH}profileImage.jpg`} /></Button>
+                        <Button component={Link} to="/About"><Avatar alt="Geethanjali Veetil" size="small" variant="rounded" src={`${IMAGE_PATH}profileImage.JPG`} /></Button>
                         <Button component={Link} to="/About" color="inherit">Geethanjali Veetil</Button>
                     </ButtonGroup>
                     <Hidden xsDown>

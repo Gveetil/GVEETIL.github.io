@@ -38,7 +38,7 @@ export default function AboutImage(props) {
             align="center"
             justify="center"
             direction="column">
-            <Box ><img src={`${IMAGE_PATH}profileImage.jpg`}
+            <Box ><img src={`${IMAGE_PATH}profileImage.JPG`}
                 className="portfolio-image"
                 alt="Geethanjali Veetil" />
             </Box>
