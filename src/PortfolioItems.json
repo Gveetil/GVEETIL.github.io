@@ -17,12 +17,28 @@
         "githubUrl": "https://github.com/dev-hg20/lets-talk-corona"
     },
     {
+        "title": "Google Books Search",
+        "image": "google_books_search",
+        "technologies": [
+            "Node.js",
+            "Express",
+            "React",
+            "Material UI",
+            "MongoDB",
+            "Mongoose",
+            "Socket IO"
+        ],
+        "description": "Google Books Search lets you browse and locate books you like, save books to review or purchase later.",
+        "appUrl": "https://gveetil-books-search.herokuapp.com/",
+        "githubUrl": "https://github.com/Gveetil/Google-Books-Search"
+    },
+    {
         "title": "Employee Directory",
         "image": "employee_directory",
         "technologies": [
             "React",
             "Bootstrap",
-            "json",
+            "JSON",
             "CSS"
         ],
         "description": "View a centralized searchable employee directory - browse, sort and locate non-sensitive data about all employees.",
@@ -56,20 +72,6 @@
         "description": "The fitness tracker application tracks your workout progress to help you reach your fitness goals faster.",
         "appUrl": "https://gveetil-fitness-tracker.herokuapp.com/",
         "githubUrl": "https://github.com/Gveetil/nosql-fitness-tracker"
-    },
-    {
-        "title": "Express Note Taker",
-        "image": "express_note_taker",
-        "technologies": [
-            "Node.js",
-            "Express",
-            "JQuery",
-            "Bootstrap",
-            "JSON"
-        ],
-        "description": "The Note Taker application lets you create, save, and delete notes on the go, and is powered by Node.js and express server.",
-        "appUrl": "https://gveetil-note-taker.herokuapp.com/",
-        "githubUrl": "https://github.com/Gveetil/Express-Note-Taker"
     },
     {
         "title": "Weather Dashboard",

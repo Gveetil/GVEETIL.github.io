@@ -41,7 +41,7 @@ const theme = createMuiTheme({
         },
         footer: {
             main: blueGrey[600],
-            contrastText: "#000",
+            contrastText: blueGrey[900],
             border: teal[300],
         }
     },
