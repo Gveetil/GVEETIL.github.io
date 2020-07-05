@@ -2,6 +2,7 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
 import { createMuiTheme } from '@material-ui/core/styles';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 import lightBlue from '@material-ui/core/colors/lightBlue';
+import teal from '@material-ui/core/colors/teal';
 
 // Load breakpoint
 const breakpoints = createBreakpoints({})
@@ -35,6 +36,13 @@ const theme = createMuiTheme({
         portfolioFooter: {
             main: blueGrey[900],
             contrastText: blueGrey[100],
+            linkText: lightBlue[400],
+            linkHover: "lightPink",
+        },
+        footer: {
+            main: blueGrey[600],
+            contrastText: "#000",
+            border: teal[300],
         }
     },
     typography: {
@@ -63,9 +71,6 @@ const theme = createMuiTheme({
                 }
             },
         },
-    },
-    toolbar: {
-        border: "3px solid #04c2c9",
     },
 });
 

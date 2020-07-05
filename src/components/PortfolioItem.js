@@ -40,9 +40,16 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.portfolioFooter.contrastText,
         padding: theme.spacing(1),
     },
-    spacing: {
+    actionLinks: {
+        color: theme.palette.portfolioFooter.linkText,
         paddingLeft: theme.spacing(2),
         paddingRight: theme.spacing(2),
+        '&:hover': {
+            color: theme.palette.portfolioFooter.linkHover,
+        },
+        '&:focus': {
+            color: theme.palette.portfolioFooter.linkHover,
+        },
     },
     media: {
         height: "16rem",
@@ -119,11 +126,11 @@ export default function PortfolioItem(props) {
             <CardActions className={classes.footer}>
                 <Box justifyItems="center" m="auto">
                     <Button component="a" href={props.appUrl} target="_blank"
-                        aria-label="launch application" color="inherit" className={classes.spacing}
+                        aria-label="launch application" color="inherit" className={classes.actionLinks}
                         startIcon={<LaunchIcon />}> Visit Website
                     </Button>
                     <Button component="a" href={props.githubUrl} target="_blank"
-                        aria-label="view code" color="inherit" className={classes.spacing}
+                        aria-label="view code" color="inherit" className={classes.actionLinks}
                         startIcon={<CodeIcon />}> View Code
                     </Button>
                 </Box>

@@ -1,12 +1,15 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Toolbar, Typography } from '@material-ui/core';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 
 // Styles used by this component
 const useStyles = makeStyles((theme) => ({
     footer: {
-        backgroundColor: theme.palette.primary.main,
-        borderTop: theme.toolbar.border,
+        backgroundColor: fade(theme.palette.footer.main, 0.2),
+        color: theme.palette.footer.contrastText,
+        borderTop: "3px solid",
+        borderColor: fade(theme.palette.footer.border, 0.3),
         position: "absolute",
         left: 0,
         bottom: 0,
@@ -18,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
 export default function Footer() {
     const classes = useStyles();
     return (
-        <Toolbar component="footer" variant="dense" className={classes.footer}>
+        <Toolbar component="footer" className={classes.footer}>
             <Box display="flex" margin="auto">
-                <Typography variant="overline" color="textSecondary">
+                <Typography variant="overline">
                     GEETHANJALI VEETIL © 2020.
                     </Typography>
             </Box >
