@@ -82,6 +82,11 @@ const theme = createMuiTheme({
                 color: '#000',
             }
         },
+        MuiInputLabel: {
+            root: {
+                color: "grey",
+            },
+        }
     },
 });
 
