@@ -9,7 +9,6 @@
             "Sequelize",
             "Materialize",
             "JQuery",
-            "Handlebars",
             "Passport"
         ],
         "description": "Lets Talk Corona is a blogging platform where people come together to share stories about the pandemic.",

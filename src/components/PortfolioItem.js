@@ -13,6 +13,7 @@ import utilities from "../utils/utilities";
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: theme.palette.portfolioFooter.main,
+        width: theme.spacing(42),
         borderRadius: 12,
         transition: '0.2s',
         boxShadow: 'none',
@@ -23,12 +24,15 @@ const useStyles = makeStyles((theme) => ({
                 .darken(0.5)
                 .fade(0.5)}`,
         },
+        [theme.breakpoints.down('xs')]: {
+            width: "auto",
+        },
     },
     title: {
         backgroundColor: theme.palette.portfolioFooter.main,
         color: theme.palette.portfolioFooter.contrastText,
         padding: 0,
-        paddingTop: theme.spacing(2),
+        paddingTop: theme.spacing(1.5),
     },
     subtitle: {
         fontSize: '1.2rem',
@@ -38,7 +42,8 @@ const useStyles = makeStyles((theme) => ({
     footer: {
         backgroundColor: theme.palette.portfolioFooter.main,
         color: theme.palette.portfolioFooter.contrastText,
-        padding: theme.spacing(1),
+        paddingTop: theme.spacing(0.4),
+        padding: theme.spacing(1.2),
     },
     actionLinks: {
         color: theme.palette.portfolioFooter.linkText,
@@ -52,8 +57,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     media: {
-        height: "16rem",
-        position: 'relative',
+        paddingTop: '65%',
     },
     overlay: {
         position: 'absolute',
@@ -68,14 +72,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
     },
     chipContainer: {
-        padding: theme.spacing(2),
-        '& > *': {
-            margin: theme.spacing(0.7),
-            borderRadius: 4,
-            fontWeight: '500',
-            color: theme.palette.portfolioOverlayItems.contrastText,
-            backgroundColor: theme.palette.portfolioOverlayItems.main,
-        },
+        paddingTop: theme.spacing(2),
     }
 }));
 

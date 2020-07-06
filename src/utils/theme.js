@@ -26,17 +26,13 @@ const theme = createMuiTheme({
             secondary: blueGrey[200],
         },
         portfolioOverlay: {
-            main: blueGrey[700],
+            main: blueGrey[800],
             contrastText: '#fff',
         },
-        portfolioOverlayItems: {
-            main: '#fff',
-            contrastText: '#000',
-        },
         portfolioFooter: {
-            main: blueGrey[900],
+            main: blueGrey[700],
             contrastText: blueGrey[100],
-            linkText: lightBlue[400],
+            linkText: lightBlue[100],
             linkHover: "lightPink",
         },
         footer: {
@@ -70,6 +66,21 @@ const theme = createMuiTheme({
                     color: lightBlue[600],
                 }
             },
+        },
+        MuiChip: {
+            sizeSmall: {
+                margin: "0.2rem",
+                height: "20px",
+                borderRadius: 4,
+                backgroundColor: blueGrey[50],
+            },
+            labelSmall: {
+                fontWeight: "500",
+                paddingLeft: "0.3rem",
+                paddingRight: "0.3rem",
+                margin: "0rem",
+                color: '#000',
+            }
         },
     },
 });
