@@ -28,18 +28,15 @@ export default function AboutDetails(props) {
                 I'm a Full Stack Web Developer based in Melbourne, Australia. I have a strong background in software
                 product
                 design and development and enjoy all things programming. My current skills are in React,
-                Node.js, Express, MySQL, MongoDB, JavaScript, jQuery, Bootstrap and CSS.
+                Node.js, Express, MySQL, MongoDB, JavaScript, jQuery, Material UI, Bootstrap and CSS.
             </Typography>
             <Typography paragraph={true}>
                 <strong className="about-me-panel-header">Education - </strong>Certificate from Monash University Coding
                     Bootcamp
                     in Full Stack Web Technologies. Graduated in Computer Science from Bangalore University.
                     </Typography>
-            <Typography paragraph={true}><strong className="about-me-panel-header text-center">Work - </strong> In an earlier life (1999-2012),
-                    I
-                    worked
-                    extensively
-                    with Microsoft .Net technologies like C#. I also have
+            <Typography paragraph={true}><strong className="about-me-panel-header text-center">Work - </strong> My prior work experience
+                    includes working with Microsoft .Net technologies like C#. I also have
                     strong analytical and design skills from my work with class and database design (OOAD, SQL Server).
                     </Typography>
             <Typography paragraph={true}>My background in

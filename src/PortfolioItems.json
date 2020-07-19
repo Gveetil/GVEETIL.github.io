@@ -1,5 +1,22 @@
 [
     {
+        "title": "Learn@Home",
+        "image": "learn_at_home",
+        "technologies": [
+            "React",
+            "Node.js",
+            "MySQL",
+            "Express",
+            "Material UI",
+            "Sequelize",
+            "Passport",
+            "Dropbox API"
+        ],
+        "description": "Learn@Home is a home-schooling solution that helps teachers and students stay up to date with their lessons and coursework.",
+        "appUrl": "https://learn-at-home.herokuapp.com/",
+        "githubUrl": "https://github.com/Gveetil/Learn-At-Home"
+    },
+    {
         "title": "Lets Talk Corona",
         "image": "lets_talk_corona",
         "technologies": [
@@ -57,20 +74,6 @@
         "description": "The EVCS Finder helps customers find the nearest charging station to charge their electric vehicles.",
         "appUrl": "https://alibahrami633.github.io/EVCS-Finder/",
         "githubUrl": "https://github.com/alibahrami633/EVCS-Finder"
-    },
-    {
-        "title": "Fitness Tracker",
-        "image": "fitness_tracker",
-        "technologies": [
-            "Node.js",
-            "Express",
-            "MongoDB",
-            "Mongoose",
-            "Materialize"
-        ],
-        "description": "The fitness tracker application tracks your workout progress to help you reach your fitness goals faster.",
-        "appUrl": "https://gveetil-fitness-tracker.herokuapp.com/",
-        "githubUrl": "https://github.com/Gveetil/nosql-fitness-tracker"
     },
     {
         "title": "Weather Dashboard",
