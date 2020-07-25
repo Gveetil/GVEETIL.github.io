@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a3600aa.chunk.css",
-    "main.js": "/static/js/main.bdcf7657.chunk.js",
-    "main.js.map": "/static/js/main.bdcf7657.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/css/2.c78c2663.chunk.css": "/static/css/2.c78c2663.chunk.css",
-    "static/js/2.58264bf9.chunk.js": "/static/js/2.58264bf9.chunk.js",
-    "static/js/2.58264bf9.chunk.js.map": "/static/js/2.58264bf9.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.3a270ce23f633ac4e05a76e1122d52e2.js": "/precache-manifest.3a270ce23f633ac4e05a76e1122d52e2.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.c78c2663.chunk.css.map": "/static/css/2.c78c2663.chunk.css.map",
-    "static/css/main.3a3600aa.chunk.css.map": "/static/css/main.3a3600aa.chunk.css.map",
-    "static/js/2.58264bf9.chunk.js.LICENSE.txt": "/static/js/2.58264bf9.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/roboto-latin-900-normal.bb1e4dc6.woff"
+    "main.css": "https://gveetil.github.io/static/css/main.3a3600aa.chunk.css",
+    "main.js": "https://gveetil.github.io/static/js/main.2aa4c049.chunk.js",
+    "main.js.map": "https://gveetil.github.io/static/js/main.2aa4c049.chunk.js.map",
+    "runtime-main.js": "https://gveetil.github.io/static/js/runtime-main.6f9f2310.js",
+    "runtime-main.js.map": "https://gveetil.github.io/static/js/runtime-main.6f9f2310.js.map",
+    "static/css/2.9f35ef5b.chunk.css": "https://gveetil.github.io/static/css/2.9f35ef5b.chunk.css",
+    "static/js/2.58264bf9.chunk.js": "https://gveetil.github.io/static/js/2.58264bf9.chunk.js",
+    "static/js/2.58264bf9.chunk.js.map": "https://gveetil.github.io/static/js/2.58264bf9.chunk.js.map",
+    "index.html": "https://gveetil.github.io/index.html",
+    "precache-manifest.8dfa8daa6815bdb182f80076bfa8664d.js": "https://gveetil.github.io/precache-manifest.8dfa8daa6815bdb182f80076bfa8664d.js",
+    "service-worker.js": "https://gveetil.github.io/service-worker.js",
+    "static/css/2.9f35ef5b.chunk.css.map": "https://gveetil.github.io/static/css/2.9f35ef5b.chunk.css.map",
+    "static/css/main.3a3600aa.chunk.css.map": "https://gveetil.github.io/static/css/main.3a3600aa.chunk.css.map",
+    "static/js/2.58264bf9.chunk.js.LICENSE.txt": "https://gveetil.github.io/static/js/2.58264bf9.chunk.js.LICENSE.txt",
+    "static/media/index.css": "https://gveetil.github.io/static/media/roboto-latin-900-normal.bb1e4dc6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.19ccc7f6.js",
-    "static/css/2.c78c2663.chunk.css",
+    "static/js/runtime-main.6f9f2310.js",
+    "static/css/2.9f35ef5b.chunk.css",
     "static/js/2.58264bf9.chunk.js",
     "static/css/main.3a3600aa.chunk.css",
-    "static/js/main.bdcf7657.chunk.js"
+    "static/js/main.2aa4c049.chunk.js"
   ]
 }
