@@ -17,6 +17,19 @@
         "githubUrl": "https://github.com/Gveetil/Learn-At-Home"
     },
     {
+        "title": "Drone Simulator",
+        "image": "drone_simulator",
+        "technologies": [
+            "React",
+            "Bootstrap",
+            "JSON",
+            "CSS"
+        ],
+        "description": "The Drone Simulator simulates an aerial drone that takes photographs of targets. The drone moves inside a grid and Instructions are sent to the drone to execute.",
+        "appUrl": "https://gveetil.github.io/React-Drone-Simulator/",
+        "githubUrl": "https://github.com/Gveetil/React-Drone-Simulator"
+    },
+    {
         "title": "Lets Talk Corona",
         "image": "lets_talk_corona",
         "technologies": [
@@ -74,17 +87,5 @@
         "description": "The EVCS Finder helps customers find the nearest charging station to charge their electric vehicles.",
         "appUrl": "https://alibahrami633.github.io/EVCS-Finder/",
         "githubUrl": "https://github.com/alibahrami633/EVCS-Finder"
-    },
-    {
-        "title": "Weather Dashboard",
-        "image": "weather_dashboard",
-        "technologies": [
-            "JQuery",
-            "Bootstrap",
-            "Open weather API"
-        ],
-        "description": "The Weather Dashboard enables users to view the current and future weather outlook for any given city.",
-        "appUrl": "https://gveetil.github.io/Weather-Dashboard/",
-        "githubUrl": "https://github.com/Gveetil/Weather-Dashboard"
     }
 ]
