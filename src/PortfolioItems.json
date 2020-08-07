@@ -25,8 +25,8 @@
             "JSON",
             "CSS"
         ],
-        "description": "The Drone Simulator simulates an aerial drone that takes photographs of targets. The drone moves inside a grid and Instructions are sent to the drone to execute.",
-        "appUrl": "https://gveetil.github.io/React-Drone-Simulator/",
+        "description": "The Drone Simulator aims to simulate an aerial drone that takes photographs of targets. The drone moves inside a grid and Instructions are sent to the drone to execute.",
+        "appUrl": "https://gveetil.github.io/React-Drone-Simulator/#/React-Drone-Simulator/information",
         "githubUrl": "https://github.com/Gveetil/React-Drone-Simulator"
     },
     {
